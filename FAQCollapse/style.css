@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.faq-container .que {
+    font-size: 20px;
+    margin: 20px;
+}
+
+.faq-container .ans {
+    margin: 20px;
+}
+
+.box {
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    margin: 15px auto;
+    min-width: 550px;
+    position: relative;
+    box-shadow: 3px 3px 10px #aaaaaa;
+}
+
+.box.active {
+    background-color: white;
+}
+
+.box .fa-regular {
+    display: none;
+}
+
+.box.active .fa-regular {
+    display: block;
+    font-size: 70px;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    transform: rotateY(180deg);
+    color: greenyellow;
+    opacity: 0.3;
+}
+.box.active .fa-regular:nth-of-type(1) {
+    left: 30px;
+    top: 20px;
+    color: aqua;
+    transform: rotateY(0);
+}
+
+.btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.box .ans,
+.btn.close {
+    display: none;
+}
+
+.box.active .ans {
+    display: block;
+}
+
+.box.active .btn.close {
+    display: block;
+}
+
+.box.active .btn.open {
+    display: none;
+}
