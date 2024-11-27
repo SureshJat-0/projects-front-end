@@ -1,5 +1,6 @@
 let input = document.querySelector('#input');
 let output = document.querySelector('.output');
+let index;
 
 function getRandomNum() {
     let numSpan = output.children.length;
@@ -18,9 +19,10 @@ input.addEventListener('input', (e) => {
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
+        index = 0;
         getRandomSpan();
         input.blur();
-        // e.target.value = null;
+        e.target.value = null;
     }
 });
 
@@ -30,7 +32,10 @@ function getRandomSpan() {
     currSpan.classList.add('highlight');
 
     setTimeout(() => {
-        currSpan.classList.remove('highlight');
-        getRandomSpan();
-    },1000);
+        index++;
+        if (index < 30) {
+            currSpan.classList.remove('highlight');
+            getRandomSpan();
+        }
+    }, 100);
 }
