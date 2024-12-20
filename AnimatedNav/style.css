@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5280f9;
+}
+
+.container .navbar {
+    display: flex;
+    width: 400px;
+    background-color: white;
+    position: relative;
+    transition: width 0.6s linear;
+}
+
+.container .navbar ul {
+    list-style: none;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 30px;
+}
+
+.container .navbar ul li {
+    opacity: 1;
+    transform: rotateY(0deg);
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+.container .navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.container .navbar button {
+    height: 30px;
+    width: 50px;
+    border: 0;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    margin: auto 5px;
+}
+
+.container .navbar button .line {
+    height: 2px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    margin-right: 10px;
+}
+
+.container .navbar button .line.line2 {
+    top: auto;
+    bottom: 20px;
+}
+
+/* after collaps */
+
+.navbar.collaps {
+    height: 50px;
+    width: 55px;
+}
+
+.navbar.collaps ul li {
+    opacity: 0;
+    transform: rotateY(360deg);
+}
